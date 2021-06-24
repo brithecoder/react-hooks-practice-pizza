@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Pizza() {
+function Pizza({pizza}) {
+  const vegetarian= pizza.vegetarian
+
   return (
     <tr>
-      <td>{"Replace Me With Pizza Topping"}</td>
-      <td>{"Replace Me With Pizza Size"}</td>
-      <td>{"Replace Me With Vegatarian"}</td>
+      <td>{pizza.topping}</td>
+      <td>{pizza.size}</td>
+      <td>{vegetarian? "yes": "no"}</td>
       <td>
         <button type="button" className="btn btn-primary">
           Edit Pizza
